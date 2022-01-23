@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>vKYC</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--Adding css-->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href={{ url_for('static',filename='css/style.css') }}>
+
+</head>
+<body>
+
+<ul class="topnav">
+    <li><a class="active" href="#home"><b>Welcome {{ message }}</b></a></li>
+    {#    <li><a href="#login" onclick="document.getElementById('id01').style.display='block'">Login</a></li>#}
+    {##}
+    {#    <li><a href="#register" onclick="document.getElementById('id02').style.display='block'">Register</a></li>#}
+    <li class="right"><a href="/logout">Logout</a></li>
+</ul>
+
+{#Form_Data#}
+
+<div class="container">
+
+    <h4 style="color: #f1f1f1"><b>Kindly Enter your Details</b></h4>
+
+    <form action="/userData" method="post">
+        <input id='textbox' type="text" name="first_name" placeholder="First Name" required>
+
+        <input id='textbox' type="text" name="last_name" placeholder="Last Name" required>
+
+        <input id='textbox' type="text" name="email" placeholder="Email" required>
+
+        <input id='textbox' type="text" name="phone_no" placeholder="Phone Number" minlength="10" maxlength="10"
+               required>
+
+        <input id='textbox' type="text" name="uid" placeholder="ID Proof" minlength="12" maxlength="12" required>
+
+        <input id='textbox' type="text" name="pancard" placeholder="Pan Card No" minlength="10" maxlength="10" required>
+
+        <input id='textbox' type="text" name="address" placeholder="Address" required>
+
+        <input id='button' class="btn" type="submit" onclick="myFunction()">
+
+    </form>
+
+</div>
+
+
+<footer>
+    <p>© 2022 Know Your Customer.<br>
+        {#        <a href="mailto:karnam.kalpesh98@gmail.com">karnam.kalpesh98@gmail.com</a></p>#}
+</footer>
+
+
+</body>
+
+
+</html>
+

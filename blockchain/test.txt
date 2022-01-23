@@ -1,0 +1,58 @@
+# Testing the block chain
+import json
+
+from BlockChain import BlockChain
+
+blockchain = BlockChain()
+
+
+def storeData(data):
+    print("***Mining about to start***")
+    # print(blockchain.chain)
+
+    last_block = blockchain.latest_block
+    last_proof_no = last_block.proof_no
+    proof_no = blockchain.proof_of_work(last_proof_no)
+
+    blockchain.new_data(data)
+
+    last_hash = last_block.calculate_hash
+    block = blockchain.construct_block(proof_no, last_hash)
+
+    print("***Mining has been successful***")
+    # print(blockchain.chain)
+    # print_data(blockchain.chain)
+    return blockchain.chain
+
+
+def print_data(blockchain_data):
+    for block in blockchain_data:
+        print(block)
+        print('----------------------------------------------------')
+
+
+if __name__ == '__main__':
+
+    for i in range(4):
+        firstname = input().strip()
+        lastname = input().strip()
+        email = input().strip()
+        # phoneno = int(input().strip())
+        # uid = int(input().strip())  # UID,idcard,voterid,driving licence,NRI card
+        # passport = int(input().strip())
+        # pancard = int(input().strip())
+        # address = int(input().strip())
+        data = {'first_name': firstname,
+                'last_name': lastname,
+                'email': email,
+                # 'phoneno ': phoneno,
+                # 'uid': uid,
+                # 'passport': passport,
+                # 'address': address
+                }
+
+    # # Converting list to json
+    # json_data = json.dumps(blockchain.chain)
+    # #         Writing data to json file
+    # with open('userdata.json', 'w') as f:
+    #     json.dump(json_data, f)

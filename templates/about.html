@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>about</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+</head>
+<body>
+<ul class="topnav">
+    <li><a class="active" href="#home"><b>About Us</b></a></li>
+    {#    <li><a href="#login" onclick="document.getElementById('id01').style.display='block'">Login</a></li>#}
+    {##}
+    {#    <li><a href="#register" onclick="document.getElementById('id02').style.display='block'">Register</a></li>#}
+    <li class="right"><a href="/logout">Logout</a></li>
+</ul>
+<div id="container1">
+    <h1 id="message">{{ message }}</h1>
+
+    <div id="about">
+        Our goal is to promote global transparency<br>
+        and make regulations less onerous on both<br>
+        suppliers and customers of financial services<br>
+        by providing a highly intuitive, end-to-end<br>
+        compliance solution.
+    </div>
+</div>
+<footer>
+    <p>© 2022 Know Your Customer.<br>
+        {#        <a href="mailto:karnam.kalpesh98@gmail.com">karnam.kalpesh98@gmail.com</a></p>#}
+</footer>
+
+</body>
+</html>

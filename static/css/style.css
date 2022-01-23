@@ -1,0 +1,122 @@
+.container {
+    border-style: solid;
+    border-color: #8E2DE2;
+    height: 430px;
+    width: 800px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 0.7rem;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.19);
+    background-image: linear-gradient(to right, #8E2DE2, #4A00E0);
+}
+
+#textbox {
+    font-size: 12px;
+    border-color: #D3DEDC;
+    opacity: 0.7;
+    border-style: solid;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-right: 4px;
+    margin-left: 4px;
+    color: #000000;
+    border-radius: 0.10rem;
+    /*box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.19);*/
+}
+
+
+#button {
+    font-size: 12px;
+    border-color: #D3DEDC;
+    /*opacity: 0.7;*/
+    border-style: solid;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-right: 4px;
+    margin-left: 4px;
+    color: #f1f1f1;
+    border-radius: 0.10rem;
+    /*box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.19);*/
+}
+
+/* CSS */
+.btn {
+    background-color: #13aa52;
+    border: 1px solid #13aa52;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    outline: none;
+    outline: 0;
+    padding: 8px 20px;
+    text-align: center;
+    transform: translateY(0);
+    transition: transform 150ms, box-shadow 150ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+
+}
+
+.btn:hover {
+    box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+    transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+    .btn {
+        padding: 10px 30px;
+    }
+}
+
+/*Display Success Message*/
+
+#message {
+
+    border: 0 solid;
+    border-color: #4A00E0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 80px;
+
+
+}
+
+
+
+#about {
+
+    border: 0 solid;
+    border-color: #4A00E0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+
+}
+
+#container1 {
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /*justify-content: space-between;*/
+    border: 0 solid;
+    border-radius: 1rem;
+    height: 400px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 50px;
+    background-image: linear-gradient(to right,#11998e,#38ef7d);
+    color: #f1f1f1;
+
+
+
+}

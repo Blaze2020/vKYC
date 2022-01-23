@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>vKYC</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--Adding css-->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    {#Materilize library#}
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+
+</head>
+<body>
+
+<ul class="topnav">
+    <li><a class="active" href="#home"><b>BKYC</b></a></li>
+    <li><a href="#login" onclick="document.getElementById('id01').style.display='block'">Login</a></li>
+
+    <li><a href="#register" onclick="document.getElementById('id02').style.display='block'">Register</a></li>
+    <li class="right"><a href="">About</a></li>
+</ul>
+
+
+<div class="container_1">
+    <div class="container_2">
+        <h1>Next Generation KYC</h1>
+        <p>Know Your Customer empowers regulated organisations to consistently deliver the<br> digital onboarding
+            experience that their individual customers expect and deserve,
+            <br>wherever they are in the world.</p>
+        <p>We redefine the end-user experience of the KYC & ID verification process,<br>
+            without ever compromising on AML compliance.</p>
+        <h4>A One Stop Shop for all your KYC needs.</h4>
+    </div>
+    <img src="{{ url_for('static',filename='images/image_2.jpg') }}" alt="KYC Image" class="image_1">
+
+</div>
+
+{#Form-Login#}
+<div id="id01" class="modal">
+
+    <form class="modal-content animate" action="/login" method="post">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="{{ url_for('static',filename='images/login.png') }}" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+
+            <button type="submit">Login</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">
+                Cancel
+            </button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+    </form>
+</div>
+
+{#Form-Register#}
+
+<div id="id02" class="modal">
+
+    <form class="modal-content animate" action="/register" method="post">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="{{ url_for('static',filename='images/login.png') }}" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+
+            <label for="checkpassword"><b> Confirm Password</b></label>
+            <input type="password" placeholder="Enter Password" name="checkpassword" required>
+            <button type="submit">Register</button>
+
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+
+
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="" class="cancelbtn">
+                Register
+
+            </button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+    </form>
+</div>
+
+<footer>
+    <p>© 2022 Know Your Customer.<br>
+        {#        <a href="mailto:karnam.kalpesh98@gmail.com">karnam.kalpesh98@gmail.com</a></p>#}
+</footer>
+
+
+{#Script#}
+<script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+    var modal2 = document.getElementById('id02');
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+        if (event.target === modal2) {
+            modal.style.display = "none";
+        }
+    }
+
+    {#Timeout for status message#}
+    var register = document.querySelector('.cancelbtn')
+    register.addEventListener('click', function () {
+        document.getElementById('id02').style.display = 'none'
+        {#document.querySelector('#toast1').style.display = 'block'#}
+
+    })
+
+    // Get toast DOM Element, get instance, then call dismiss function
+    {#var toast = document.querySelector('.status')#}
+    {#setTimeout(function () {#}
+    {#    toast.style.display = 'none'#}
+    //, 1000);}
+
+</script>
+
+
+</body>
+</html>
+

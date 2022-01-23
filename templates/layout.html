@@ -1,0 +1,10 @@
+{% extends 'about.html' %}
+
+{% block content %}
+    {% for item in data %}
+        <h1>{{ item.Name }}</h1>
+        <p>{{ item.Profession }}</p>
+        <p>{{ item.Age }}</p>
+        <p>{{ item.Aim }}</p>
+    {% endfor %}
+{% endblock content %}
